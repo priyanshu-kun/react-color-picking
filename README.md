@@ -19,3 +19,4 @@
 ---
 
 ![Emoji Picker](https://raw.githubusercontent.com/priyanshuSharma-WebDev/React-color-picker/master/readme%20image/Screenshot%20(16).png)
+
