@@ -51,6 +51,19 @@ class App extends Component {
               <Switch location={location}>
                 <Route
                   exact
+                  path='/'
+                  render={routeProps => (
+                    <div className='page'>
+                      <PaletteList
+                        palettes={this.state.palettes}
+                        deletePalette={this.deletePalette}
+                        {...routeProps}
+                      />
+                    </div>
+                  )}
+                />
+                <Route
+                  exact
                   path='/palette/new'
                   render={routeProps => (
                     <div className='page'>
@@ -78,19 +91,6 @@ class App extends Component {
                 />
                 <Route
                   exact
-                  path='/'
-                  render={routeProps => (
-                    <div className='page'>
-                      <PaletteList
-                        palettes={this.state.palettes}
-                        deletePalette={this.deletePalette}
-                        {...routeProps}
-                      />
-                    </div>
-                  )}
-                />
-                <Route
-                  exact
                   path='/palette/:id'
                   render={routeProps => (
                     <div className='page'>
@@ -109,9 +109,10 @@ class App extends Component {
                       palettes={this.state.palettes}
                       deletePalette={this.deletePalette}
                       {...routeProps}
-                    />ss
+                    />
                   </div>
-                )}></Route>
+                )}>
+                </Route>
               </Switch>
             </CSSTransition>
           </TransitionGroup>

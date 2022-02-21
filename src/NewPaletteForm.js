@@ -120,6 +120,7 @@ class NewPaletteForm extends Component {
             </Typography>
             <div className={classes.buttons}>
               <Button
+                style={{marginRight: "3px", maxWidth: "160px"}}
                 variant='contained'
                 color='secondary'
                 onClick={this.clearColors}
@@ -128,6 +129,7 @@ class NewPaletteForm extends Component {
                 Clear Palette
               </Button>
               <Button
+                style={{maxWidth: "160px"}}
                 variant='contained'
                 className={classes.button}
                 color='primary'
